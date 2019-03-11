@@ -7,6 +7,7 @@ class Main {
     int left = scale[0];
     int right = scale[1];
     int[] weight = toArray(strArr[1]);
+    
     List<String> solution = new ArrayList<>();
     for (int i = 0; i < weight.length; i++) {
         if (Math.abs(left - right) == weight[i]) 
@@ -21,7 +22,7 @@ class Main {
         Collections.sort(solution, (s1, s2) -> Integer.valueOf(s1.length()).compareTo(s2.length()));
         return solution.get(0);
     }
-    return "No possible solution. Please try again.";
+    return "No Possible Solution. Please try again.";
   }
   
   public static int[] toArray(String str) {
@@ -30,7 +31,7 @@ class Main {
       for (int i = 0; i < strWeight.length; i++) weight[i] = Integer.parseInt(strWeight[i].trim());
       return weight;
   }
-  
+  //Main Method
   public static void main (String[] args) { 
     Scanner s = new Scanner(System.in);
     System.out.print(ScaleBalancing(s.nextLine())); 
